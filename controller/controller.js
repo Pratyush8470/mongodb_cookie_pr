@@ -1,14 +1,24 @@
-const collection = require('../model/db/config');
-const bcrypt=require('bcrypt');
+const index = async (req, res) => {
+    console.log(req.cookies);
 
-const homecon = (req, res) => {
-    res.render('login')
-}
-const login = (req, res) => {
-    res.render('index')
-}
-const signup = (req, res) => {
-    res.render('sign-up')
+    if(req.cookies.user_id){
+        const fname = req.cookies.fname;
+        const lname = req.cookies.lname;
+        const email = req.cookies.email;
+
+        console.log(fname, lname, email);
+        res.render('index', {fname, lname, email});
+    }else{
+        res.redirect('/login');
+    }   
 }
 
-module.exports = {homecon,login,signup};
+module.exports = {index};
+
+
+
+
+
+
+
+

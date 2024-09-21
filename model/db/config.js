@@ -7,10 +7,11 @@ mongoose.connect('mongodb://localhost:27017/adminPannel')
     });
 
 const userSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    user: String,
-    password: String,
+    fname: {type :String, require:true},
+    lname: {type :String, require:true},
+    email: {type :String, require:true},
+    user: {type :String, require:true},
+    password: {type :String, require:true}
 });
 
 const collection = mongoose.model('db', userSchema);
