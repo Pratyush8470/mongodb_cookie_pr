@@ -3,32 +3,29 @@ const collection = require('../model/db/config');
 
 
 const login = (req, res) => {
-    res.render('index')
+    res.render("login")
 }
 
 const login_submit = async (req, res) => {
     console.log("login_submit", req.body);
 
-    const username = await collection.findOne({ user: req.body.user });
-    console.log("username", username);
+    const userEmail = await collection.find({ email: req.body.email });
+    console.log("userEmail", userEmail);
 
-    if (username > 0) {
-        bcrypt.compare(req.body.password, username[0].password, (err, result) => {
+    if (userEmail.length > 0) {
+        bcrypt.compare(req.body.password, userEmail[0].password, (err, result) => {
             console.log("ok", result);
 
-            if (result) {
-                res.cookie('userId', user[0]._id.toString());
-                res.cookie('firstname', user[0].fname);
-                res.cookie('lastname', user[0].lname);
-                res.cookie('username', user[0].user);
-                res.cookie('email', user[0].email);
+            if (!result) {
+                res.cookie('userId', userEmail[0]._id.toString());
+
                 res.redirect('/');
             } else {
-                res.redirect('/login');
+                res.redirect('/loginForm');
             }
         });
     } else {
-        res.redirect('/signup');
+        res.redirect('/signupForm');
     }
 }
 

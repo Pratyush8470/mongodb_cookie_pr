@@ -1,6 +1,5 @@
-const bcrypt = require('bcrypt');
 const collection = require('../model/db/config');
-const fs = require('fs');
+const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 
@@ -9,27 +8,30 @@ const signup = (req, res) => {
 }
 
 const signup_data = async (req, res) => {
-    if (req.body.password === req.body.con_password) {
+    console.log("signup_data", req.body);
+
+    if (req.body.password === req.body.con_pass) {
+
         bcrypt.hash(req.body.password, saltRounds, async (err, hash) => {
-            if (err) throw err;
+
             const info = new collection({
-                name: req.body.name,
+                fname: req.body.fname,
+                lname: req.body.lname,
                 email: req.body.email,
-                user: req.body.user,
+                userName: req.body.userName,
                 password: hash,
             })
-            console.log(info);
-
             try {
+
                 const userData = await info.save();
+                console.log("userData", userData);
             } catch (err) {
-                console.log("error!", err);
-                res.redirect('/login');
+                res.redirect('/loginForm');
             }
 
         });
     } else {
-        res.redirect('/signup');
+        res.redirect('/signupForm');
     }
 }
 module.exports = { signup, signup_data }

@@ -6,10 +6,10 @@ const signuppage = require('../controller/signuppage');
 
 router.get('/', con.index);
 
-router.get('/login', loginpage.login);
+router.get('/loginForm', loginpage.login);
 router.post('/login', loginpage.login_submit);
 
-router.get('/signup', signuppage.signup);
+router.get('/signupForm', signuppage.signup);
 router.post('/signup', signuppage.signup_data);
 
 module.exports = router;
