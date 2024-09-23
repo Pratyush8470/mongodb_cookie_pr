@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE CARD</title>
+
+    <link rel="icon" href="./images/letter-p.png" type="icon/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+
+</head>
+
+<body class=" bg-[#EAEFE0] text-[#143d59] font">
+
+    <section class="py-8">
+        <div class="container">
+            <div class="row flex flex-wrap justify-center">
+                <div class="w-4/12 shadow-4xl text-center overflow-hidden relative" style="border-radius: 70px;">
+                    <div class="pa-1 p-16"
+                        style="background: #405189;background: linear-gradient(201deg, #405189 5%, #646a80 82%);">
+                        <div class="flex items-center justify-center">
+                            <div class="profil-pic bg-black rounded-full overflow-hidden bg-cover h-[200px] w-[200px] shadow-5xl">
+                                <img src="images/1695285115306.jpg" alt="profil-pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pa-2 bg-white text-center p-5">
+                        <div>
+                            <h1 id="name" class="text-[#143d59] text-3xl pt-7"></h1>
+                            <p id="course" class="text-[#143d59] mt-2"></p>
+                        </div>
+                        <div class="mt-5 mb-5">
+                            <i class="fa-solid fa-circle text-xs" style="color: #143d59;font-size: 5px;"></i>
+                            <i class="fa-solid fa-circle text-xs" style="color: #143d59;font-size: 5px;"></i>
+                            <i class="fa-solid fa-circle text-xs" style="color: #143d59;font-size: 5px;"></i>
+                        </div>
+                        <div class="email-phone flex justify-center pb-5">
+                            <div class="email ">
+                                <a href="javascript:void(0)"
+                                    class="py-4 px-10 rounded-full block bg-[#405189] text-white hover:bg-white hover:text-[#405189] transition-all"
+                                    style="border: 1px solid #405189;">
+                                    <i class="fa-solid fa-envelope mr-5"></i>
+                                    <span id="email"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let name = "BHATIYA PRATYUSH";
+        let course = "BACK-END DEVELOPER";
+        let email = "pratyushbhatiya106@gmail.com";
+
+        document.querySelector("#name").innerHTML = name;
+        document.querySelector("#course").innerHTML = course;
+        document.querySelector("#email").innerHTML = email;
+    </script>
+</body>
+
+</html>

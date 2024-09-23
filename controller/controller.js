@@ -1,7 +1,7 @@
 const index = (req, res) => {
     console.log(req.cookies);
 
-    if (req.cookies.user_id) {
+    if (req.cookies.userId) {
         const fname = req.cookies.fname;
         const lname = req.cookies.lname;
         const email = req.cookies.email;

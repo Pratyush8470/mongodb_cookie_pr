@@ -1,5 +1,6 @@
-const collection = require('../model/db/config');
+const collection_d = require('../model/db/config');
 const bcrypt = require('bcrypt');
+const fs=require('fs')
 const saltRounds = 10;
 
 
@@ -14,19 +15,25 @@ const signup_data = async (req, res) => {
 
         bcrypt.hash(req.body.password, saltRounds, async (err, hash) => {
 
-            const info = new collection({
+            const info = new collection_d({
                 fname: req.body.fname,
                 lname: req.body.lname,
                 email: req.body.email,
                 userName: req.body.userName,
-                password: hash,
+                password: hash
             })
+
+            console.log("info",info);
+            
             try {
 
                 const userData = await info.save();
                 console.log("userData", userData);
-            } catch (err) {
                 res.redirect('/loginForm');
+
+
+            } catch (err) {
+                res.redirect('/signupForm')
             }
 
         });
