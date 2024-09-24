@@ -16,6 +16,7 @@ const signup_data = async (req, res) => {
         bcrypt.hash(req.body.password, saltRounds, async (err, hash) => {
 
             const info = new collection_d({
+                path: req.file.path,
                 fname: req.body.fname,
                 lname: req.body.lname,
                 email: req.body.email,

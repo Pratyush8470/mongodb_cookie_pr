@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../vie/fonts.ws/dist/css/output.css">
+    <link rel="stylesheet" href="../views/dist/css/fonts.css">
+    
 </head>
 
 <body>
@@ -1015,15 +1019,20 @@
                                     <li class="user rel">
                                         <a href="javascript:void(0)" class="dropdown">
                                             <div class="user-wrap flex align-items">
-                                                <div class="w-3" style="margin-right: 10px;">
+                                                <div class="w-3">
                                                     <div class="user-img">
                                                         <img src="<%= path %>" alt="user">
                                                     </div>
                                                 </div>
                                                 <div class="w-9">
                                                     <div class="user-info">
-                                                        <p><%= username %></p>
-                                                        <span><%= fname %> <%= lname %> </span>
+                                                        <p>
+                                                            <%= username %>
+                                                        </p>
+                                                        <span>
+                                                            <%= fname %>
+                                                                <%= lname %>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1031,10 +1040,11 @@
                                         <div class="dropdown-menu abs">
                                             <ul>
                                                 <div class="text" style="margin-bottom:5px ;">
-                                                    <span>Welcome <%= fname %> <%= lname %>!</span>
+                                                    <span>Welcome <%= fname %>
+                                                            <%= lname %>!</span>
                                                 </div>
                                                 <li>
-                                                    <a href="/card.ejs" class="flex">
+                                                    <a href="./card.ejs" class="flex">
                                                         <div class="w-3 flex left align-items">
                                                             <i class="fa-solid fa-user-tie"></i>
                                                         </div>
@@ -1136,561 +1146,47 @@
             <div class="main-cont">
                 <div class="container" id="particles-js">
                     <div class="row">
-                        <div class="w-12">
-                            <div class="intro-main flex align-items space-between">
-                                <div class="w-6 ">
-                                    <h4>Welcome <%= fname %> <%= lname %>!</h4>
-                                    <span>Here's what's happening with your store today.</span>
-                                </div>
-                                <div class="w-1"></div>
-                                <div class="w-3 calender flex right">
-                                    <a href="javascript:void(0)" class="dropdown">
-                                        <span>01 Jan 2022 to 31 Jan 2022</span>
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                    </a>
-                                    <div class="dropdown-menu">
-
-                                    </div>
-                                </div>
-                                <div class="w-2 add-cart">
-                                    <a href="javascript:void(0)" class="flex align-items center">
-                                        <i class="fa-solid fa-circle-plus"></i>
-                                        <p>Add Product</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="w-12 flex">
-                            <div class="w-3">
-                                <div class="sale-wrap">
-                                    <div class="flex space-between">
-                                        <p>TOTAL EARNINGS</p>
-                                        <h5> <i class="fa-solid fa-arrow-trend-up"></i> +16.24 %</h5>
-                                    </div>
-                                    <div class="sale-con">
-                                        <h3>$559.25k</h3>
-                                        <div class="flex space-between align-items">
-                                            <a href="javascript:void(0)">View net earnings</a>
-                                            <i class="fa-solid fa-dollar-sign right"></i>
+                        <div class="w-12 flex flex-wrap justify-center">
+                            <div class="w-4/12 shadow-4xl text-center overflow-hidden relative"
+                                style="border-radius: 70px;">
+                                <div class="pa-1 p-16"
+                                    style="background: #405189;background: linear-gradient(201deg, #405189 5%, #646a80 82%);">
+                                    <div class="flex items-center justify-center">
+                                        <div
+                                            class="profil-pic bg-black rounded-full overflow-hidden bg-cover h-[200px] w-[200px] shadow-5xl">
+                                            <img src="<%= path %> " alt="profil-pic">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="w-3">
-                                <div class="sale-wrap">
-                                    <div class="flex space-between">
-                                        <p>ORDERS</p>
-                                        <h5 style="color: #f06548;"> <i class="fa-solid fa-arrow-trend-down"></i> -3.57
-                                            %</h5>
+                                <div class="pa-2 bg-white text-center p-5">
+                                    <div>
+                                        <h1 id="name" class="text-[#143d59] text-3xl pt-7">
+                                            <%= user %>
+                                        </h1>
+                                        <p id="course" class="text-[#143d59] mt-2">
+                                            <%= fname %>
+                                                <%= lname %>
+                                        </p>
                                     </div>
-                                    <div class="sale-con">
-                                        <h3>36,894</h3>
-                                        <div class="flex space-between align-items">
-                                            <a href="javascript:void(0)">View all orders</a>
-                                            <i class="fa-solid fa-bag-shopping"
-                                                style="background-color: #DFF0FA; color: #299CDB;"></i>
-                                        </div>
+                                    <div class="mt-5 mb-5">
+                                        <i class="fa-solid fa-circle text-xs"
+                                            style="color: #143d59;font-size: 5px;"></i>
+                                        <i class="fa-solid fa-circle text-xs"
+                                            style="color: #143d59;font-size: 5px;"></i>
+                                        <i class="fa-solid fa-circle text-xs"
+                                            style="color: #143d59;font-size: 5px;"></i>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="w-3">
-                                <div class="sale-wrap">
-                                    <div class="flex space-between">
-                                        <p>CUSTOMERS</p>
-                                        <h5> <i class="fa-solid fa-arrow-trend-up"></i> +29.08 %</h5>
-                                    </div>
-                                    <div class="sale-con">
-                                        <h3>183.35M</h3>
-                                        <div class="flex space-between align-items">
-                                            <a href="javascript:void(0)">See details</a>
-                                            <i class="fa-regular fa-circle-user"
-                                                style="background-color: #FEF4E4; color: #f7b84b;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-3">
-                                <div class="sale-wrap">
-                                    <div class="flex space-between">
-                                        <p>MY BALANCE</p>
-                                        <h5> +0.00 %</h5>
-                                    </div>
-                                    <div class="sale-con">
-                                        <h3>$165.89k</h3>
-                                        <div class="flex space-between align-items">
-                                            <a href="javascript:void(0)">Withdraw money</a>
-                                            <i class="fa-solid fa-wallet"
-                                                style="background-color: #E2E5ED; color: #364574;"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="w-12 flex">
-                            <div class="w-8 chart">
-                                <div class="chart-wrap">
-                                    <div class="chart-title flex align-items">
-                                        <div class="w-6">
-                                            <h6>Revenue</h6>
-                                        </div>
-                                        <div class="w-6">
-                                            <ul class="flex right">
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        ALL
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        1M
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        6M
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        1Y
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="chart-info flex align-items">
-                                        <div class="w-3 info-1 text">
-                                            <h3>7,585</h3>
-                                            <p>Orders</p>
-                                        </div>
-                                        <div class="w-3 info-1 text">
-                                            <h3>$22.89k</h3>
-                                            <p>Earnings</p>
-                                        </div>
-                                        <div class="w-3 info-1 text">
-                                            <h3>367</h3>
-                                            <p>Refunds</p>
-                                        </div>
-                                        <div class="w-3 info-1 text" style="color: #0ab39c; border: none;">
-                                            <h3>18.92%</h3>
-                                            <p>Ratio</p>
-                                        </div>
-                                    </div>
-                                    <div class="chart-js" height="200px" width="100%" id="chart">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-4 map">
-                                <div class="map-wrap">
-                                    <div class="map-title flex align-items">
-                                        <div class="w-8">
-                                            <h6>Sales Locations</h6>
-                                        </div>
-                                        <div class="w-4">
-                                            <a href="javascript:void(0)">
-                                                Export
+                                    <div class="email-phone flex justify-center pb-5">
+                                        <div class="email ">
+                                            <a href="javascript:void(0)"
+                                                class="py-4 px-10 rounded-full block bg-[#405189] text-white hover:bg-white hover:text-[#405189] transition-all"
+                                                style="border: 1px solid #405189;">
+                                                <i class="fa-solid fa-envelope mr-5"></i>
+                                                <span id="email">
+                                                    <%= email %>
+                                                </span>
                                             </a>
                                         </div>
-                                    </div>
-                                    <div class="map-container">
-                                        <img
-                                            src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png">
-                                        <div class="point venezuela tippy" title="Venezuela"></div>
-                                        <div class="point brasil tippy" title="Brasil"></div>
-                                        <div class="point argentina tippy" title="Argentina"></div>
-                                        <div class="point colombia tippy" title="Colombia"></div>
-                                        <div class="point panama tippy" title="Panamá"></div>
-                                        <div class="point mexico tippy" title="Mexico"></div>
-                                        <div class="point usa tippy" title="Estados Unidos"></div>
-                                        <div class="point arabia tippy" title="Arabia Saudi"></div>
-                                        <div class="point turquia tippy" title="Turquía"></div>
-                                        <div class="point rusia tippy" title="Rusia"></div>
-                                        <div class="point china tippy" title="China"></div>
-                                        <div class="point japon tippy" title="Japon"></div>
-                                        <div class="point australia tippy" title="Australia"></div>
-                                    </div>
-                                    <div class="country flex">
-                                        <div class="w-6">
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> venezuela
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Brasil
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Argentina
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Colombia
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Panamá
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Mexico
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="w-6">
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Estados Unidos
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Arabia Saudi
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Turquía
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Rusia
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> China
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="fa-solid fa-circle"></i> Japon
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="w-12 sell-info flex">
-                            <div class="w-6 sell-1">
-                                <div class="sell-info-wrap">
-                                    <ul>
-                                        <div class="s-i-title flex align-items">
-                                            <div class="w-6">
-                                                <h3>Best Selling Products</h3>
-                                            </div>
-                                            <div class="w-6 flex right">
-                                                <h5>SORT BY : <span> Today</span></h5>
-                                            </div>
-                                        </div>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-1.png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Brand T-shirts</h4>
-                                                        <p>24 Apr 2021</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$ 29</h6>
-                                                        <span>Price</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>62</h6>
-                                                        <span>Orders</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>510</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$1,798</h6>
-                                                        <span>Total</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-2.png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Bentwood Chair</h4>
-                                                        <p>24 Apr 2021</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$85</h6>
-                                                        <span>Price</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>35</h6>
-                                                        <span>Orders</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>660</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$2982</h6>
-                                                        <span>Total</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-3.png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Paper Cup</h4>
-                                                        <p>24 Apr 2021</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$14</h6>
-                                                        <span>Price</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>80</h6>
-                                                        <span>Orders</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>750</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$1128</h6>
-                                                        <span>Total</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-6.png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Gray T-Shirt</h4>
-                                                        <p>24 Apr 2021</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$54</h6>
-                                                        <span>Price</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>74</h6>
-                                                        <span>Orders</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>805</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$4000</h6>
-                                                        <span>Total</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <i>Showing <b>5</b> of <b>25</b> Results</i>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="w-6 sell-1">
-                                <div class="sell-info-wrap">
-                                    <ul>
-                                        <div class="s-i-title flex align-items">
-                                            <div class="w-6">
-                                                <h3>Top Sellers</h3>
-                                            </div>
-                                            <div class="w-6 flex right">
-                                                <h5>Report</h5>
-                                            </div>
-                                        </div>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img 1.png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>iTest Factory</h4>
-                                                        <p>Oliver Tyler</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>8547</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$541200</h6>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>32%</h6>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-2 (1).png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Digitech Galaxy</h4>
-                                                        <p>John Roberts</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>895</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$75030</h6>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>79%</h6>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-3 (1).png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Nesta Technologies</h4>
-                                                        <p>Harley Fuller</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>3470</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$45600</h6>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>90%</h6>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-1 flex">
-                                                <div class="w-2 flex center align-items">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="images/img-8.png" alt="img-1">
-                                                    </a>
-                                                </div>
-                                                <div class="w-4">
-                                                    <a href="javascript:void(0)">
-                                                        <h4>Zoetic Fashion</h4>
-                                                        <p>James Bowen</p>
-                                                    </a>
-                                                </div>
-                                                <div class="w-6 flex align-items center padding-none space-evenly text">
-                                                    <a href="javascript:void(0)">
-                                                        <h6>5488</h6>
-                                                        <span>Stocks</span>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>$29456</h6>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <h6>40%</h6>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <i>Showing <b>5</b> of <b>25</b> Results</i>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="w-12 flex">
-                            <div class="w-4 map">
-                                <div class="map-wrap">
-                                    <div class="map-title flex align-items">
-                                        <div class="w-6">
-                                            <h6>Store Visits</h6>
-                                        </div>
-                                        <div class="w-6 flex right">
-                                            <h5>Report</h5>
-                                        </div>
-                                    </div>
-                                    <div class="stor-visits" style="padding: 15px 0;">
-                                        <canvas width="500" id="myChart"></canvas>
-                                    </div>
-                                    <div class="stor-visits" id="line" style="padding: 15px 0;"></div>
-                                </div>
-                            </div>
-                            <div class="w-8 map">
-                                <div class="map-wrap">
-                                    <div class="map-title flex align-items">
-                                        <div class="w-6">
-                                            <h6>calender</h6>
-                                        </div>
-                                        <div class="w-6 flex right">
-                                            <h5>Report</h5>
-                                        </div>
-                                    </div>
-                                    <div class="Calender">
-                                        <div id='calendar'></div>
                                     </div>
                                 </div>
                             </div>

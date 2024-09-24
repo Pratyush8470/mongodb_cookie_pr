@@ -5,15 +5,20 @@ const index = (req, res) => {
         const fname = req.cookies.fname;
         const lname = req.cookies.lname;
         const email = req.cookies.email;
+        const username = req.cookies.user;
+        const path = req.cookies.path;
 
-        console.log(fname, lname, email);
-        res.render('index', { fname, lname, email });
+        console.log(fname, lname, email, username, path);
+        res.render('index', { fname, lname, email, username, path });
     } else {
         res.redirect('/loginForm');
     }
 }
+const cardprofile = (req,res)=>{
+    res.render('/card');
+}
 
-module.exports = { index };
+module.exports = { index , cardprofile};
 
 
 

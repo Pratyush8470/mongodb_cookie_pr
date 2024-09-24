@@ -7,12 +7,12 @@ mongoose.connect('mongodb+srv://pratyushbhatiya106:pratyush87888990@cluster1.2bd
     });
 
 const userSchema = new mongoose.Schema({
+    path: { type: String, require: true },
     fname: { type: String, require: true },
     lname: { type: String, require: true },
     email: { type: String, require: true },
     userName: { type: String, require: true },
     password: { type: String, require: true },
-    path: { type: String, require: true }
 });
 
 const collection_d = mongoose.model('dbs', userSchema);

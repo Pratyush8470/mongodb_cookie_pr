@@ -20,6 +20,10 @@ const login_submit = async (req, res) => {
             if (result) {
                 res.cookie('userId', userEmail[0]._id.toString());
                 res.cookie('email', userEmail[0].email);
+                res.cookie('user', userEmail[0].userName);
+                res.cookie('fname', userEmail[0].fname);
+                res.cookie('lname', userEmail[0].lname);
+                res.cookie('path', userEmail[0].path);
 
                 res.redirect('/');
             } else {
