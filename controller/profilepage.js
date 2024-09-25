@@ -1,10 +1,11 @@
- const userdata = async (req, res) => {
-    const path = await req.cookie.path;
-    const fname = await req.cookie.fname;
-    const lname = await req.cookie.lname;
-    const email = await req.cookie.email;
+const userdata = async (req, res) => {
+    const fname = await req.cookies.fname;
+    const lname = await req.cookies.lname;
+    const email = await req.cookies.email;
+    const username = await req.cookies.user;
+    const path = await req.cookies.path;
 
-    res.render('card', { path, fname, lname, email });
+    res.render('profile', { fname, lname, email, username, path });
 }
 
 module.exports = { userdata };
