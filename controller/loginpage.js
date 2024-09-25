@@ -1,5 +1,4 @@
 const bcrypt = require('bcrypt');
-const collection = require('../model/db/config');
 const collection_d = require('../model/db/config');
 
 
